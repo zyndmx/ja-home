@@ -1,0 +1,808 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杭州聚昂科技有限公司 - 引领未来的科技企业</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        accent: '#FF7D00',
+                        dark: '#1D2129',
+                        light: '#F2F3F5',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .text-shadow-lg {
+                text-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            }
+            .bg-gradient-blue {
+                background: linear-gradient(135deg, #165DFF 0%, #36CFC9 100%);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter text-dark bg-light antialiased">
+    <!-- 导航栏 -->
+    <header id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-blue flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">JA</span>
+                    </div>
+                    <span class="text-xl font-bold text-dark">聚昂科技</span>
+                </a>
+                
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="font-medium text-dark hover:text-primary transition-custom">首页</a>
+                    <a href="#about" class="font-medium text-dark hover:text-primary transition-custom">关于我们</a>
+                    <a href="#services" class="font-medium text-dark hover:text-primary transition-custom">服务</a>
+                    <a href="#products" class="font-medium text-dark hover:text-primary transition-custom">产品</a>
+                    <a href="#news-case" class="font-medium text-dark hover:text-primary transition-custom">新闻与案例</a>
+                    <a href="#contact" class="font-medium text-dark hover:text-primary transition-custom">联系我们</a>
+                </nav>
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-dark hover:text-primary focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="#home" class="block py-2 font-medium text-dark hover:text-primary transition-custom">首页</a>
+                <a href="#about" class="block py-2 font-medium text-dark hover:text-primary transition-custom">关于我们</a>
+                <a href="#services" class="block py-2 font-medium text-dark hover:text-primary transition-custom">服务</a>
+                <a href="#products" class="block py-2 font-medium text-dark hover:text-primary transition-custom">产品</a>
+                <a href="#news-case" class="block py-2 font-medium text-dark hover:text-primary transition-custom">新闻与案例</a>
+                <a href="#contact" class="block py-2 font-medium text-dark hover:text-primary transition-custom">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="pt-28 pb-20 md:pt-40 md:pb-32 bg-gradient-to-br from-primary/5 to-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-6">
+                        聚昂科技<br>
+                        <span class="text-primary">引领未来</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-xl">
+                        我们致力于为企业提供前沿的技术解决方案，帮助您在数智化转型中保持竞争优势，实现业务增长。
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-custom shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            联系我们
+                        </a>
+                        <a href="#services" class="px-8 py-3 bg-white text-primary border border-primary font-medium rounded-lg hover:bg-primary/5 transition-custom shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                            了解服务
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-blue rounded-2xl opacity-20 blur-xl"></div>
+                        <img src="https://p9-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/30361d561f3b4f1ca05d7e1b53226af0~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1753935485&amp;x-signature=xQPmVbfh76PTKfpn%2B1ehrSYjfDU%3D" alt="科技创新展示" class="relative z-10 w-full h-auto rounded-xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark mb-4">关于我们</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">杭州聚昂科技有限公司成立于2022年，是一家专注于为数智化转型解决方案的高新技术企业。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-gradient-blue rounded-2xl opacity-20 blur-xl"></div>
+                        <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/3f682dc317694ba48805e5aae8c65a6d~tplv-a9rns2rl98-image.image?rk3s=8e244e95&amp;rrcfp=2609e108&amp;x-expires=1753934980&amp;x-signature=qyVqeL8fgNjnwRaGh0xzPhLhwzw%3D" alt="公司办公环境" class="relative z-10 w-full h-auto rounded-xl shadow-xl">
+                        <div class="absolute -bottom-8 right-8 bg-white p-6 rounded-lg shadow-xl z-20">
+                            <div class="flex items-center space-x-4">
+                                <div class="text-4xl font-bold text-primary">3+</div>
+                                <div>
+                                    <p class="font-semibold text-dark">年行业经验</p>
+                                    <p class="text-sm text-gray-500">专注企业数智化服务</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-dark mb-6">我们的使命</h3>
+                    <p class="text-gray-600 mb-6">通过创新的技术解决方案，帮助企业实现数智化转型，提升核心竞争力，创造更大价值。</p>
+                    
+                    <h3 class="text-2xl font-bold text-dark mb-6">我们的愿景</h3>
+                    <p class="text-gray-600 mb-8">成为全球领先的数智化转型服务提供商，引领行业发展方向。</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                <i class="fa fa-users text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark mb-2">专业团队</h4>
+                                <p class="text-sm text-gray-600">100+技术专家随时为您服务</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                <i class="fa fa-globe text-secondary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark mb-2">全球客户</h4>
+                                <p class="text-sm text-gray-600">服务超过500家企业客户</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                <i class="fa fa-certificate text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark mb-2">权威认证</h4>
+                                <p class="text-sm text-gray-600">多项行业领先技术认证</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-3">
+                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                <i class="fa fa-trophy text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-dark mb-2">行业认可</h4>
+                                <p class="text-sm text-gray-600">获得20+行业重要奖项</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-flex items-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-custom shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务 -->
+    <section id="services" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark mb-4">我们的服务</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">我们提供全方位的数智化转型解决方案，满足企业不同阶段的发展需求。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 服务卡片 1 - 通信服务 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-custom p-8 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
+                        <i class="fa fa-comments text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">通信服务</h3>
+                    <p class="text-gray-600 mb-6">提供全球领先的通信解决方案，包括国内国际短信与语音服务，满足企业多样化通信需求。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-accent mr-2"></i> 国内国际短信服务
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-accent mr-2"></i> 语音通知与验证
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-accent mr-2"></i> 智能通信解决方案
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-accent font-medium hover:text-accent/80 transition-custom">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 2 - 云计算服务 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-custom p-8 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-lg bg-secondary/10 flex items-center justify-center mb-6">
+                        <i class="fa fa-cloud text-secondary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">云计算服务</h3>
+                    <p class="text-gray-600 mb-6">提供灵活、安全、高效的云计算解决方案，帮助企业降低IT成本，提升业务灵活性。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-secondary mr-2"></i> 云迁移服务
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-secondary mr-2"></i> 云基础设施管理
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-secondary mr-2"></i> 混合云解决方案
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-secondary font-medium hover:text-secondary/80 transition-custom">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 3 - 网络安全服务 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-custom p-8 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-lg bg-accent/10 flex items-center justify-center mb-6">
+                        <i class="fa fa-shield text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">网络安全服务</h3>
+                    <p class="text-gray-600 mb-6">提供全方位的网络安全解决方案，保护企业数据安全，防范各类网络威胁。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-accent mr-2"></i> 安全评估与规划
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-accent mr-2"></i> 云工作负载保护
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-accent mr-2"></i> 安全监控与响应
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-accent font-medium hover:text-accent/80 transition-custom">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- 服务卡片 4 - AI智算咨询服务 -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-custom p-8 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                        <i class="fa fa-cogs text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-4">AI智算咨询服务</h3>
+                    <p class="text-gray-600 mb-6">提供专业的AI智算咨询服务，助力企业在人工智能领域实现高效计算和创新发展。</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-primary mr-2"></i> AI算力资源池
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-primary mr-2"></i> 模型训练优化
+                        </li>
+                        <li class="flex items-center text-gray-600">
+                            <i class="fa fa-check text-primary mr-2"></i> 智能体搭建
+                        </li>
+                    </ul>
+                    <a href="#contact" class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-custom">
+                        了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品展示 -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark mb-4">我们的产品</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">杭州聚昂科技有限公司自主研发的产品，为企业提供高效、智能的解决方案。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 产品卡片 1 - 国内短信平台 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1025/600/400" alt="国内短信平台" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-xs font-medium rounded-full">国内短信</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">国内短信平台</h3>
+                        <p class="text-gray-600 mb-4">提供稳定、高效的国内短信发送服务，满足企业营销、通知等多种需求。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 2 - 国际短信平台 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1033/600/400" alt="国际短信平台" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-secondary text-white text-xs font-medium rounded-full">国际短信</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">国际短信平台</h3>
+                        <p class="text-gray-600 mb-4">支持全球多个国家和地区的短信发送，助力企业拓展国际市场。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 3 - 国际语音平台 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1071/600/400" alt="国际语音平台" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-accent text-white text-xs font-medium rounded-full">国际语音</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">国际语音平台</h3>
+                        <p class="text-gray-600 mb-4">提供清晰、稳定的国际语音通知和验证服务，提升企业与海外客户的沟通效率。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 4 - 云计算平台 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1048/600/400" alt="云计算平台" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-xs font-medium rounded-full">云计算</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">云计算平台</h3>
+                        <p class="text-gray-600 mb-4">提供强大的云计算能力，支持企业灵活部署应用，降低IT成本。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 5 - AI智算平台 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/180/600/400" alt="AI智算平台" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-secondary text-white text-xs font-medium rounded-full">AI智算</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">AI智算平台</h3>
+                        <p class="text-gray-600 mb-4">为企业提供高效的AI计算资源和算法支持，加速AI项目的开发和部署。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 6 - CWPP产品 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/160/600/400" alt="CWPP产品" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-accent text-white text-xs font-medium rounded-full">CWPP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">CWPP产品</h3>
+                        <p class="text-gray-600 mb-4">提供全面的云工作负载保护，保障企业云环境中的应用和数据安全。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 产品卡片 7 - 高防DDoS产品 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/160/600/400" alt="高防DDoS产品" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-accent text-white text-xs font-medium rounded-full">高防DDoS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-3">高防DDoS产品</h3>
+                        <p class="text-gray-600 mb-4">有效抵御DDoS攻击，保障企业网络的稳定运行。</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-primary font-semibold">价格面议</span>
+                            <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                                了解详情 <i class="fa fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-custom shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    查看全部产品 <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻与案例 -->
+    <section id="news-case" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark mb-4">新闻与案例</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">了解我们的最新动态和成功案例。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 新闻卡片 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/48/600/400" alt="公司新闻" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-primary text-white text-xs font-medium rounded-full">公司新闻</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2023年10月15日</span>
+                            <span class="px-2 py-1 bg-primary/10 text-primary text-xs font-medium rounded">新闻</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">聚昂科技荣获"年度最佳数智化服务提供商"称号</h3>
+                        <p class="text-gray-600 mb-4">杭州聚昂科技有限公司在2023年中国数智化转型峰会上被评为"年度最佳数智化服务提供商"，这是公司连续第三年获此殊荣。</p>
+                        <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 新闻卡片 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/1/600/400" alt="产品发布" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-secondary text-white text-xs font-medium rounded-full">产品发布</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2023年9月5日</span>
+                            <span class="px-2 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded">产品</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">聚昂科技发布新一代AI智算平台，性能提升50%</h3>
+                        <p class="text-gray-600 mb-4">杭州聚昂科技有限公司今日发布新一代AI智算平台，该平台采用最新架构，计算性能提升50%，同时降低30%的能耗。</p>
+                        <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 案例卡片 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-custom group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://picsum.photos/id/26/600/400" alt="成功案例" class="w-full h-64 object-cover transform group-hover:scale-105 transition-custom duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/70 to-transparent flex items-end">
+                            <div class="p-6">
+                                <span class="px-3 py-1 bg-accent text-white text-xs font-medium rounded-full">成功案例</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-500">2023年8月20日</span>
+                            <span class="px-2 py-1 bg-accent/10 text-accent text-xs font-medium rounded">案例</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark mb-3">聚昂科技助力某大型企业完成数智化转型，效率提升40%</h3>
+                        <p class="text-gray-600 mb-4">聚昂科技为某大型制造企业提供了全方位的数智化转型解决方案，包括云计算、AI智算和网络安全服务，帮助企业整体效率提升40%。</p>
+                        <a href="#contact" class="inline-flex items-center text-dark font-medium hover:text-primary transition-custom">
+                            阅读更多 <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-flex items-center px-8 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-custom shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    查看更多新闻与案例 <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark mb-4">联系我们</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">如果您有任何问题或需求，请随时联系我们。</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-dark mb-6">联系方式</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                    <i class="fa fa-map-marker text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1">公司地址</h4>
+                                    <p class="text-gray-600">浙江省杭州市余杭区文一西路969号</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                    <i class="fa fa-phone text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1">联系电话</h4>
+                                    <p class="text-gray-600">400-888-8888</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                    <i class="fa fa-envelope text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1">电子邮箱</h4>
+                                    <p class="text-gray-600">info@juangtech.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mt-1 flex-shrink-0">
+                                    <i class="fa fa-clock-o text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-dark mb-1">工作时间</h4>
+                                    <p class="text-gray-600">周一至周五: 9:00 - 18:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-semibold text-dark mb-4">关注我们</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-weixin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-weibo"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-custom">
+                                    <i class="fa fa-youtube-play"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-light rounded-xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-dark mb-6">发送消息</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的姓名">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">邮箱</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的邮箱">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">电话</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的电话">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">主题</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入消息主题">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">消息内容</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-custom" placeholder="请输入您的消息内容"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-custom shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                                发送消息
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-blue flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">JA</span>
+                        </div>
+                        <span class="text-xl font-bold text-white">聚昂科技</span>
+                    </a>
+                    <p class="text-gray-400 mb-6">
+                        杭州聚昂科技有限公司致力于为企业提供前沿的技术解决方案，帮助企业在数智化转型中保持竞争优势。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-custom">
+                            <i class="fa fa-youtube-play"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">快速链接</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-custom">首页</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-custom">关于我们</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">服务</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition-custom">产品</a></li>
+                        <li><a href="#news-case" class="text-gray-400 hover:text-white transition-custom">新闻与案例</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-custom">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">服务</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">通信服务</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">云计算服务</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">网络安全服务</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-custom">AI智算咨询服务</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">联系方式</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa fa-map-marker mt-1 text-primary"></i>
+                            <span class="text-gray-400">浙江省杭州市余杭区文一西路969号</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa fa-phone mt-1 text-primary"></i>
+                            <span class="text-gray-400">400-888-8888</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa fa-envelope mt-1 text-primary"></i>
+                            <span class="text-gray-400">info@juangtech.com</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa fa-clock-o mt-1 text-primary"></i>
+                            <span class="text-gray-400">周一至周五: 9:00 - 18:00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>© 2023 杭州聚昂科技有限公司 版权所有 | 浙ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-md');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-md');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+        
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    // 滚动到目标位置
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // 表单提交
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢您的留言！我们将尽快与您联系。');
+            this.reset();
+        });
+    </script>
+
+    </body></html>
